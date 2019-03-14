@@ -1,11 +1,14 @@
-package main;
+package test;
 
+import main.math;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
-class mathTest {
-    math math = new math();
+public class mathTest {
+    main.math math = new math();
     @Test
     public void number3times10() throws Exception {
         int result = math.multiplyBy10(3);
@@ -117,4 +120,45 @@ class mathTest {
     }
 
 
+
+    @Test
+    public void restFrom23DividedBy4() throws Exception {
+        double result = math.rest(23, 4);
+        double expected = 3;
+        assertEquals(expected, result, 0.0);
+    }
+
+    @Test
+    public void restFrom7DividedByMinus3() throws Exception {
+        double result = math.rest(7, -3);
+        double expected = 1;
+        assertEquals(expected, result, 0.0);
+    }
+
+    @Test
+    public void restFromMinus7DividedBy3() throws Exception {
+        double result = math.rest(-7, 3);
+        double expected = -1;
+        assertEquals(expected, result, 0.0);
+    }
+
+    @Test
+    public void restFromMinus7DividedByMinus3() throws Exception {
+        double result = math.rest(-7, -3);
+        double expected = -1;
+        assertEquals(expected, result, 0.0);
+    }
+
+    @org.junit.Test(expected = Exception.class)
+    public void restFrom7DividedByMinus0() throws Exception {
+        double result = math.rest(7, 0);
+        assertEquals("can't divide by zero!!", result);
+    }
+
+    @Test
+    public void notEqualsDividedBy4() throws Exception {
+        double result = math.rest(24, 4);
+        double expected = 4;
+        assertNotEquals(expected, result);
+    }
 }

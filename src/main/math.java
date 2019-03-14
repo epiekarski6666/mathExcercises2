@@ -24,4 +24,13 @@ public class math {
         int result = ((x+5)*(int)y )- (((int)y*(int)y) +8);
         return result;
     }
+    public double rest(int number1, int number2) {
+        double result = 0.0;
+        if (number2 == 0){
+            throw new ArithmeticException("can't divide by zero!!");
+        }
+        else {
+            result = number1 % number2;
+        }return result;
+    }
 }
