@@ -1,6 +1,7 @@
 package test;
 
 import main.math;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -160,5 +161,100 @@ public class mathTest {
         double result = math.rest(24, 4);
         double expected = 4;
         assertNotEquals(expected, result);
+    }
+    @Test
+    public void shouldAnswerWithTrue() {
+        assertTrue(true);
+    }
+
+    @Test
+    public void isTheResultMultiplicationGreaterThan100() {
+        boolean b = math.isTheResultGreaterThan100(30);
+        Assert.assertTrue(b);
+    }
+
+    @Test
+    public void checkSmallestNumberA() {
+        assertEquals(22, math.returnTheSmallestNumber(22, 54, 128));
+    }
+
+    @Test
+    public void checkSmallestNumberB() {
+        assertEquals(54, math.returnTheSmallestNumber(89, 54, 128));
+    }
+
+    @Test
+    public void checkSmallestNumberC() {
+        assertEquals(19, math.returnTheSmallestNumber(89, 54, 19));
+    }
+
+    @Test
+    public void checkBiggestNumberA() {
+        assertEquals(128, math.returnTheBiggestNumber(22, 54, 128));
+    }
+
+    @Test
+    public void checkBiggestNumberB() {
+        assertEquals(514, math.returnTheBiggestNumber(320, 514, 128));
+    }
+
+    @Test
+    public void checkBiggestNumberC() {
+        assertEquals(712, math.returnTheBiggestNumber(699, 514, 712));
+    }
+
+    @Test
+    public void checkAbsoluteValueIfArgumentIsPositive() {
+        assertEquals(7, math.absoluteValue(7));
+    }
+
+    @Test
+    public void checkAbsoluteValueIfArgumentIsNegative() {
+        assertEquals(7, math.absoluteValue(-7));
+    }
+
+    @Test
+    public void checkNumberIsInTheRangeIfArgumentsAreCorrect() {
+        boolean b = math.isNumberInTheRange(30, 30, 32);
+        Assert.assertTrue(b);
+    }
+
+    @Test
+    public void checkNumberIsInTheRangeIfArgumentsAreNotCorrect() {
+        boolean b = math.isNumberInTheRange(30, 31, 32);
+        Assert.assertFalse(b);
+    }
+
+    @Test
+    public void checkNumberIsEvenIfArgumentIsCorrect() {
+        boolean b = math.isNumberEven(30);
+        Assert.assertTrue(b);
+    }
+
+    @Test
+    public void checkNumberIsEvenIfArgumentIsNotCorrect() {
+        boolean b = math.isNumberEven(31);
+        Assert.assertFalse(b);
+    }
+
+    @Test
+    public void checkIsMultilple() {
+        boolean b = math.ifNumberOneIsMultipleNumberTwo(64, 8);
+        Assert.assertTrue(b);
+    }
+
+    @Test
+    public void checkSumArithemticProgression() {
+        assertEquals(45, math.countSumArithemticProgression(3));
+    }
+
+    @Test
+    public void checkNWordValueArithmeticProgression() {
+        assertEquals(34, math.countNWordValueArithmeticProgression(3));
+    }
+
+    @Test
+    public void checkNWordValueArithmeticProgressionWithOtherArgument() {
+        assertEquals(62, math.countNWordValueArithmeticProgression(17));
     }
 }
