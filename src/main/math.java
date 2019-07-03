@@ -8,9 +8,7 @@ public class math {
     public int multiplyBy10(int no) {
         int result = no*10;
         return result;
-
     }
-
     /*
     2.
     Napisz metodę obliczającą pole kwadratu
@@ -35,6 +33,10 @@ public class math {
         int result = ((x+5)*(int)y )- (((int)y*(int)y) +8);
         return result;
     }
+    /*
+    5.
+    Napisz metodę dzielącą dwie liczby + sprawdzenie podzielności przez 0
+     */
     public double rest(int number1, int number2) {
         double result = 0.0;
         if (number2 == 0){
@@ -45,7 +47,7 @@ public class math {
         }return result;
     }
     /*
-    5.
+    6.
     Napisz program, który sprawdzi czy przekazana liczba jest parzysta
     */
     public boolean isNumberEven(int x) {
@@ -53,7 +55,7 @@ public class math {
         return result;
     }
     /*
-    6.
+    7.
     Napisz program, który zwróci wartość bezwzględna z liczby x, tj |x|
     */
 
@@ -65,7 +67,7 @@ public class math {
         return x;
     }
     /*
-    7.
+    8.
     Napisz program, który pomnoży wprowadzoną liczbę przez 8 i zwróci wartość true jesli wynik jest większy od 100.
     W przeciwnym wypadku zwróci wartość false
     */
@@ -80,7 +82,7 @@ public class math {
     }
 
     /*
-    8.
+    9.
     Napisz program, który sprawdzi czy liczba x jest wielokrotnością liczby y
     */
     public boolean ifNumberOneIsMultipleNumberTwo(int x, int y) {
@@ -92,7 +94,7 @@ public class math {
     }
 
     /*
-    9.
+    10.
     Napisz program, zwróci najmniejszą spośród wprowadzonych liczb
     */
     public int returnTheSmallestNumber(int a, int b, int c) {
@@ -109,7 +111,7 @@ public class math {
     }
 
     /*
-    10.
+    11.
     Napisz program, zwróci największą spośród wprowadzonych liczb
     */
     public int returnTheBiggestNumber(int a, int b, int c) {
@@ -125,7 +127,7 @@ public class math {
     }
 
     /*
-    11.
+    12.
     Napisz program, który sprawdzi czy podana w argumencie liczba nalezy do przedzialu <x,y>
     */
     public boolean isNumberInTheRange(int number, int x, int y) {
@@ -139,7 +141,7 @@ public class math {
     }
 
     /*
-    12.
+    13.
     Napisz program,który obliczy sumę n(wartosc podana w argumencie metody) pierwszych wyrazów ciągu arytmetycznego
     o wzorze ogólnym: a_n = 6n+3
     */
@@ -149,7 +151,7 @@ public class math {
     }
 
     /*
-    13.
+    14.
     Napisz program,który wyznaczy n-ty(podany w argumecie) wyraz ciągu arytmetycznego o którym wiesz, że a18=64 oraz r=2.
     */
     public int countNWordValueArithmeticProgression(int n) {
