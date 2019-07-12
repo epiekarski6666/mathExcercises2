@@ -158,4 +158,5 @@ public class math {
         int result = 64+(n-18)*2;
         return result;
     }
+    //cos  tam
 }
